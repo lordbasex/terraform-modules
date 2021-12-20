@@ -1,9 +1,9 @@
 # terraform-modules
 
 
-# Module Backend S3
+## Module Backend S3
 
-## main.tf
+### main.tf
 ```
 module "backend" {
   source       = "github.com/lordbasex/terraform-modules/aws/backend"
@@ -12,14 +12,14 @@ module "backend" {
 }
 ```
 
-## provider.tf
+### provider.tf
 ```
 provider "aws" {
   region = var.aws_region
 }
 ```
 
-## variables.tf
+### variables.tf
 ```
 variable "project_name" {
   description = "Everything for state related terraform"
@@ -34,7 +34,7 @@ variable "aws_region" {
 }
 ```
 
-## terraform.tfvars 
+### terraform.tfvars 
 ```
 project_name = "MyProjectName"
 aws_region   = "us-east-1"
